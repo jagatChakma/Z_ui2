@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:z_ui2/constants.dart';
+import 'package:z_ui2/screens/forgot_password.dart';
+import 'package:z_ui2/screens/home_page.dart';
+import 'package:z_ui2/screens/sign_in_screen.dart';
 import 'package:z_ui2/screens/splash_screen.dart';
+import 'package:z_ui2/screens/sign_in_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,6 +18,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
         fontFamily: "Muli",
+        appBarTheme: AppBarTheme(
+          color: Colors.white,
+          elevation: 0.0,
+          brightness: Brightness.light,
+          iconTheme: IconThemeData(
+            color: Colors.black,
+          ),
+        ),
         textTheme: TextTheme(
           bodyText2: TextStyle(color: kTextColor),
           bodyText1: TextStyle(color: kTextColor),
@@ -23,6 +35,9 @@ class MyApp extends StatelessWidget {
       initialRoute: SplashScreen.id,
       routes: {
         SplashScreen.id: (context) => SplashScreen(),
+        SignInScreen.id: (context) => SignInScreen(),
+        ForgotPassword.id: (context) => ForgotPassword(),
+        HomePage.id: (context) => HomePage(),
       },
     );
   }

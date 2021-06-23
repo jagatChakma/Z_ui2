@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:z_ui2/constants.dart';
+import 'package:z_ui2/screens/sign_in_screen.dart';
 import 'package:z_ui2/size_config.dart';
+import 'sign_in_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   static final String id = "splash_screen";
@@ -71,12 +73,13 @@ class _SplashScreenState extends State<SplashScreen> {
                       height: getProportionateScreenHeight(56.0),
                       // ignore: deprecated_member_use
                       child: FlatButton(
+                        padding: EdgeInsets.symmetric(horizontal: 20.0),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0),
                         ),
                         color: kPrimaryColors,
                         onPressed: () {
-                          //
+                          Navigator.pushNamed(context, SignInScreen.id);
                         },
                         child: Text(
                           "Continue",
