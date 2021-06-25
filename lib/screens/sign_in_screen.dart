@@ -4,6 +4,7 @@ import 'package:z_ui2/constants.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:z_ui2/screens/forgot_password.dart';
 import 'package:z_ui2/screens/home_page.dart';
+import 'package:z_ui2/screens/sign_up.dart';
 import 'package:z_ui2/size_config.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -193,11 +194,16 @@ class _BodyState extends State<Body> {
                   "Don't have account ?",
                   style: TextStyle(fontSize: getProportionateScreenWidth(16.0)),
                 ),
-                Text(
-                  "Sign Up",
-                  style: TextStyle(
-                      fontSize: getProportionateScreenWidth(16.0),
-                      color: kPrimaryColors),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, SignUp.id);
+                  },
+                  child: Text(
+                    " Sign Up",
+                    style: TextStyle(
+                        fontSize: getProportionateScreenWidth(16.0),
+                        color: kPrimaryColors),
+                  ),
                 )
               ],
             )

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:z_ui2/constants.dart';
+import 'package:z_ui2/screens/complete_profile.dart';
 import 'package:z_ui2/screens/forgot_password.dart';
 import 'package:z_ui2/screens/home_page.dart';
+import 'package:z_ui2/screens/otp_screen.dart';
 import 'package:z_ui2/screens/sign_in_screen.dart';
+import 'package:z_ui2/screens/sign_up.dart';
 import 'package:z_ui2/screens/splash_screen.dart';
 import 'package:z_ui2/screens/sign_in_screen.dart';
 
@@ -38,6 +41,9 @@ class MyApp extends StatelessWidget {
         SignInScreen.id: (context) => SignInScreen(),
         ForgotPassword.id: (context) => ForgotPassword(),
         HomePage.id: (context) => HomePage(),
+        SignUp.id: (context) => SignUp(),
+        Complete_Profile.id: (context) => Complete_Profile(),
+        OtpScreen.id: (context) => OtpScreen(),
       },
     );
   }

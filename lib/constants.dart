@@ -9,3 +9,16 @@ const kPrimaryGradientColor = LinearGradient(
 const kSecondaryColor = Color(0xff979797);
 const kTextColor = Color(0xff757575);
 const kAnimationDuration = Duration(milliseconds: 200);
+
+final otpInputDecoration = InputDecoration(
+  contentPadding: EdgeInsets.symmetric(vertical: 15.0),
+  enabledBorder: outlineInputBorder(),
+  focusedBorder: outlineInputBorder(),
+);
+
+OutlineInputBorder outlineInputBorder() {
+  return OutlineInputBorder(
+    borderRadius: BorderRadius.circular(15.0),
+    borderSide: BorderSide(color: kTextColor),
+  );
+}

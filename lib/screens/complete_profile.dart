@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:z_ui2/constants.dart';
-import 'package:z_ui2/screens/complete_profile.dart';
-import 'package:z_ui2/screens/sign_in_screen.dart';
-import 'package:z_ui2/size_config.dart';
+import 'package:z_ui2/screens/otp_screen.dart';
 
-class SignUp extends StatefulWidget {
-  static final String id = "Sign_Up";
+import '../size_config.dart';
+
+class Complete_Profile extends StatefulWidget {
+  static final String id = "complete_profile";
 
   @override
-  _SignUpState createState() => _SignUpState();
+  _Complete_ProfileState createState() => _Complete_ProfileState();
 }
 
-class _SignUpState extends State<SignUp> {
+class _Complete_ProfileState extends State<Complete_Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Sign up",
+          "Sign Up",
           style: TextStyle(color: Colors.black),
         ),
       ),
@@ -28,73 +28,37 @@ class _SignUpState extends State<SignUp> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              SizedBox(
-                height: SizeConfig.screenHeight * 0.05,
-              ),
               Text(
-                "Register Account",
+                "Cpmplete Profile",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    fontSize: 30.0,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black),
+                  fontSize: 30.0,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               Text(
-                "Complete your details \n or  continue with social media",
+                "Complete your details or \ncontinue with social media",
+                style: TextStyle(letterSpacing: 1.0),
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 18.0, letterSpacing: 1.0),
               ),
               SizedBox(
                 height: SizeConfig.screenHeight * 0.05,
               ),
               TextFormField(
-                keyboardType: TextInputType.emailAddress,
                 decoration: InputDecoration(
-                  labelText: "Email",
-                  hintText: "yourmail@mail.com",
-                  floatingLabelBehavior: FloatingLabelBehavior.always,
+                  labelText: "First Name",
+                  hintText: "Enter your First Name",
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(28.0),
-                    borderSide: BorderSide(color: kTextColor),
-                    gapPadding: 10.0,
-                  ),
+                      borderRadius: BorderRadius.circular(20.0),
+                      borderSide: BorderSide(color: kTextColor),
+                      gapPadding: 10.0),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(28.0),
+                    borderRadius: BorderRadius.circular(20.0),
                     borderSide: BorderSide(color: kTextColor),
                     gapPadding: 10.0,
                   ),
-                  contentPadding: EdgeInsets.symmetric(
-                    horizontal: 42,
-                    vertical: 20.0,
-                  ),
-                  suffixIcon: Padding(
-                    padding: const EdgeInsets.fromLTRB(0.0, 0.0, 20.0, 0.0),
-                    child: SvgPicture.asset(
-                      "assets/icons/Mail.svg",
-                      height: 20.0,
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 20.0,
-              ),
-              TextFormField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  labelText: "Password",
-                  hintText: "********",
                   floatingLabelBehavior: FloatingLabelBehavior.always,
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(28.0),
-                    borderSide: BorderSide(color: kTextColor),
-                    gapPadding: 10.0,
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(28.0),
-                    borderSide: BorderSide(color: kTextColor),
-                    gapPadding: 10.0,
-                  ),
                   contentPadding: EdgeInsets.symmetric(
                     horizontal: 40.0,
                     vertical: 20.0,
@@ -102,31 +66,30 @@ class _SignUpState extends State<SignUp> {
                   suffixIcon: Padding(
                     padding: const EdgeInsets.fromLTRB(0.0, 0.0, 20.0, 0.0),
                     child: SvgPicture.asset(
-                      "assets/icons/Lock.svg",
+                      "assets/icons/User.svg",
                       height: 20.0,
                     ),
                   ),
+                  //prefixIcon: Icon(Icons.add),
                 ),
               ),
               SizedBox(
                 height: 20.0,
               ),
               TextFormField(
-                obscureText: true,
                 decoration: InputDecoration(
-                  labelText: "Confirm Password",
-                  hintText: "********",
-                  floatingLabelBehavior: FloatingLabelBehavior.always,
+                  labelText: "Last Name",
+                  hintText: "Enter your Last Name",
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(28.0),
-                    borderSide: BorderSide(color: kTextColor),
-                    gapPadding: 10.0,
-                  ),
+                      borderRadius: BorderRadius.circular(20.0),
+                      borderSide: BorderSide(color: kTextColor),
+                      gapPadding: 10.0),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(28.0),
+                    borderRadius: BorderRadius.circular(20.0),
                     borderSide: BorderSide(color: kTextColor),
                     gapPadding: 10.0,
                   ),
+                  floatingLabelBehavior: FloatingLabelBehavior.always,
                   contentPadding: EdgeInsets.symmetric(
                     horizontal: 40.0,
                     vertical: 20.0,
@@ -134,53 +97,100 @@ class _SignUpState extends State<SignUp> {
                   suffixIcon: Padding(
                     padding: const EdgeInsets.fromLTRB(0.0, 0.0, 20.0, 0.0),
                     child: SvgPicture.asset(
-                      "assets/icons/Lock.svg",
+                      "assets/icons/User.svg",
                       height: 20.0,
                     ),
                   ),
+                  //prefixIcon: Icon(Icons.add),
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              TextFormField(
+                keyboardType: TextInputType.phone,
+                decoration: InputDecoration(
+                  labelText: "Phone Number",
+                  hintText: "Enter your phone number",
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                      borderSide: BorderSide(color: kTextColor),
+                      gapPadding: 10.0),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                    borderSide: BorderSide(color: kTextColor),
+                    gapPadding: 10.0,
+                  ),
+                  floatingLabelBehavior: FloatingLabelBehavior.always,
+                  contentPadding: EdgeInsets.symmetric(
+                    horizontal: 40.0,
+                    vertical: 20.0,
+                  ),
+                  suffixIcon: Padding(
+                    padding: const EdgeInsets.fromLTRB(0.0, 0.0, 25.0, 0.0),
+                    child: SvgPicture.asset(
+                      "assets/icons/Phone.svg",
+                      height: 20.0,
+                    ),
+                  ),
+                  //prefixIcon: Icon(Icons.add),
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              TextFormField(
+                keyboardType: TextInputType.streetAddress,
+                decoration: InputDecoration(
+                  labelText: "Address",
+                  hintText: "Enter your address",
+                  enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                      borderSide: BorderSide(color: kTextColor),
+                      gapPadding: 10.0),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20.0),
+                    borderSide: BorderSide(color: kTextColor),
+                    gapPadding: 10.0,
+                  ),
+                  floatingLabelBehavior: FloatingLabelBehavior.always,
+                  contentPadding: EdgeInsets.symmetric(
+                    horizontal: 40.0,
+                    vertical: 20.0,
+                  ),
+                  suffixIcon: Padding(
+                    padding: const EdgeInsets.fromLTRB(0.0, 0.0, 20.0, 0.0),
+                    child: SvgPicture.asset(
+                      "assets/icons/Location point.svg",
+                      height: 20.0,
+                    ),
+                  ),
+                  //prefixIcon: Icon(Icons.add),
                 ),
               ),
               SizedBox(
                 height: SizeConfig.screenHeight * 0.05,
               ),
               SizedBox(
-                width: double.infinity,
-                height: getProportionateScreenHeight(56.0),
+                // width: double.infinity,
+                height: 60.0,
                 // ignore: deprecated_member_use
                 child: FlatButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, Complete_Profile.id);
+                    Navigator.pushNamed(context, OtpScreen.id);
                   },
                   color: kPrimaryColors,
-                  // padding: EdgeInsets.symmetric(horizontal: 20.0),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0),
                   ),
                   child: Text(
                     "Continue",
-                    style: TextStyle(fontSize: 18.0, color: Colors.white),
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18.0,
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: SizeConfig.screenHeight * 0.05,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SocialCard(
-                    icon: "assets/icons/facebook-2.svg",
-                    pressed: () {},
-                  ),
-                  SocialCard(
-                    icon: "assets/icons/google-icon.svg",
-                    pressed: () {},
-                  ),
-                  SocialCard(
-                    icon: "assets/icons/twitter.svg",
-                    pressed: () {},
-                  ),
-                ],
               ),
               SizedBox(
                 height: SizeConfig.screenHeight * 0.05,
