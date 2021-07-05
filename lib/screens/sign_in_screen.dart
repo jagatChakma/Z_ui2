@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:z_ui2/constants.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:z_ui2/screens/forgot_password.dart';
-import 'package:z_ui2/screens/home_page.dart';
+import 'package:z_ui2/screens/home/home_screen.dart';
 import 'package:z_ui2/screens/sign_up.dart';
 import 'package:z_ui2/size_config.dart';
 

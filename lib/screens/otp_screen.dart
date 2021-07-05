@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:z_ui2/constants.dart';
+import 'package:z_ui2/screens/home/home_screen.dart';
 import 'package:z_ui2/size_config.dart';
 
 class OtpScreen extends StatefulWidget {
@@ -159,7 +160,9 @@ class _OtpScreenState extends State<OtpScreen> {
                 height: 60.0,
                 // ignore: deprecated_member_use
                 child: FlatButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, HomePage.id);
+                  },
                   color: kPrimaryColors,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0),

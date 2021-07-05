@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:z_ui2/constants.dart';
 import 'package:z_ui2/screens/complete_profile.dart';
 import 'package:z_ui2/screens/forgot_password.dart';
-import 'package:z_ui2/screens/home_page.dart';
+import 'package:z_ui2/screens/home/home_screen.dart';
+import 'package:z_ui2/screens/product_details/product_details_screen.dart';
 import 'package:z_ui2/screens/otp_screen.dart';
 import 'package:z_ui2/screens/sign_in_screen.dart';
 import 'package:z_ui2/screens/sign_up.dart';
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
         SignUp.id: (context) => SignUp(),
         Complete_Profile.id: (context) => Complete_Profile(),
         OtpScreen.id: (context) => OtpScreen(),
+        ProductDetails.id: (context) => ProductDetails(),
       },
     );
   }
